@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN" ng-app="network-analyse">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Image Inpainting</title>
+        <link rel="stylesheet" href="static/lib/node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/main.css">
+    </head>
+    <body>
+    <div class="container">
+      <div class="header clearfix" ng-controller="NavbarCtrl">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ng-class="{active: isPage(1)}" ng-click="setPage(1)">
+                <a href="#">Predefined</a>
+            </li>
+            <li role="presentation" ng-class="{'active': isPage(2)}" ng-click="setPage(2)">
+                <a href="#!/diy">DIY</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">图像补全</h3>
+      </div>
+
+
+      <div ng-view=""></div>
+
+      <footer class="footer">
+        <p> weihuang0908@qq.com</p>
+      </footer>
+
+    </div>
+
+    <!--<script src="static/lib/node_modules/jquery/dist/jquery.js"></script>-->
+    <script src="static/lib/node_modules/angular/angular.js"></script>
+    <script src="static/lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="static/lib/node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="static/lib/node_modules/angular-cookies/angular-cookies.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/home/home-controller.js"></script>
+    <script src="static/js/home/diy-controller.js"></script>
+    </body>
+</html>

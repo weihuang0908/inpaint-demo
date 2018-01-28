@@ -1,0 +1,5 @@
+*.pyc
+*.swp
+static/output/*
+static/upload/*
+static/lib/node_modules/*

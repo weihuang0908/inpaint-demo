@@ -1,0 +1,83 @@
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" ng-class="{active: isSet(1)}"><a ng-click="setTab(1)">128*128</a></li>
+    <li role="presentation" ng-class="{active: isSet(2)}"><a ng-click="setTab(2)">原尺寸</a></li>
+</ul>
+<div class="jumbotron" ng-show="isSet(1)">
+    <div class="row">
+        <div class= "col-sm-3 col-md-3" style="overflow:auto">
+            <img ng-src="{{small_origin_src}}"/>
+            <div class="caption">原图</div>
+        </div>
+        <div class= "col-sm-3 col-md-3" style="overflow:auto">
+             <img ng-src="{{small_g_output_src}}"/>
+             <div class="caption">G 输出</div>
+        </div>
+        <div class= "col-sm-3 col-md-3" style="overflow:auto">
+             <img ng-src="{{small_q_output_src}}"/>
+             <div class="caption">D 输出</div>
+        </div>
+        <div class= "col-sm-3 col-md-3" style="overflow:auto">
+            <img ng-src="{{small_mask_src}}"/>
+            <div class="caption">遮罩</div>
+        </div>
+        <div class= "col-sm-3 col-md-3" style="overflow:auto">
+             <img ng-src="{{small_input_src}}"/>
+             <div class="caption">输入</div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-sm" ng-click="refresh_mask()">
+          <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> 更新遮罩
+    </button>
+    <button type="button" class="btn btn-default btn-sm" ng-click="previous_img()">
+          <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> 上一张图
+    </button>
+    <button type="button" class="btn btn-default btn-sm" ng-click="next_img()">
+          <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 下一张图
+    </button>
+</div>
+<div class="jumbotron" ng-show="isSet(2)">
+    <div class="row">
+        <div class= "col-sm-4 col-md-4" style="overflow:auto">
+            <div class="thumbnail"> 
+                <img ng-src="{{origin_src}}"/>  
+                <div class="caption">原图</div>
+            </div>
+        </div>
+        <div class= "col-sm-4 col-md-4" style="overflow:auto">
+            <div class="thumbnail"> 
+                <img ng-src="{{mask_src}}"/>  
+                <div class="caption">遮罩</div>
+            </div>
+        </div>
+        <div class= "col-sm-4 col-md-4" style="overflow:auto">
+            <div class="thumbnail"> 
+                <img ng-src="{{input_src}}" />  
+                <div class="caption">输入</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class= "col-sm-6 col-md-6" style="overflow:auto">
+            <div class="thumbnail"> 
+                <img ng-src="{{g_output_src}}" />  
+                <div class="caption">G 输出</div>
+            </div>
+        </div>
+        <div class= "col-sm-6 col-md-6" style="overflow:auto">
+            <div class="thumbnail"> 
+                 <img ng-src="{{q_output_src}}"/>
+                <div class="caption">D 输出</div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-sm" ng-click="refresh_mask()">
+          <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> 更新遮罩
+    </button>
+    <button type="button" class="btn btn-default btn-sm" ng-click="previous_img()">
+          <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> 上一张图
+    </button>
+    <button type="button" class="btn btn-default btn-sm" ng-click="next_img()">
+          <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 下一张图
+    </button>
+</div>
+
